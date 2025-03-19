@@ -169,6 +169,11 @@ def export_data(df):
 # Main Streamlit App
 def main():
     st.title("Sales Data Analysis")
+    st.info("""
+    **Note:** Before uploading your file, please ensure the following columns are present in the Excel sheet:
+            
+    **Invoice Date** || **Product** || **Total Sales** || **Operating Profit** || **Region**
+    """)
 
     uploaded_file = st.file_uploader("Upload your sales data file", type=["xlsx"])
 
